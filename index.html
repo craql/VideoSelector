@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--<script src="http://webapps-cdn.esri.com/tools/MapShowcase/_include.js"></script>-->
+<script src="_include.js"></script>
+
+<title>Video Selector Demo</title>
+
+</head>
+<script>
+Craydent.DEBUG_MODE = true;
+
+
+	var specs = {
+		container:'VideoSelectorContainer',
+		videos:[
+		"Soil Survey","Shaded Relief","Geology","Recent Earthquakes","Weather Warnings","Recent Precipitation"
+		]
+	
+	}
+	var videoselector = new VideoSelector(specs);
+
+	
+
+</script>
+
+<body>
+
+<div id="VideoSelectorContainer"></div>
+</body>
+</html>
