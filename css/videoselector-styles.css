@@ -17,3 +17,48 @@
 	bottom:0;
 	position:absolute;
 }
+/*-------------------------------------------------------------------->
+	1 | VIDEO SELECTOR
+<--------------------------------------------------------------------*/
+.video-selector {
+    position: relative;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+	max-width:960px;
+}
+/*-------------------------------------------------------------------->
+	2 | VIDEO PANEL
+<--------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------->
+	3 | VIDEO MENU
+<--------------------------------------------------------------------*/
+/*sizes*/
+.XL-size .vs-video-menu{width: 960px;}
+.L-size .vs-video-menu{width: 720px;}
+.M-size .vs-video-menu{width: 480px;}
+.S-size .vs-video-menu{width: 320px;}
+/*Menu Options */
+.vs-video-menu-option {
+    cursor: pointer;
+    padding: 5px;
+}
+.vs-video-menu-option:hover {
+    background: rgba(100,100,100,.3);
+}
+.vs-video-menu-option.current {
+    background: rgba(0, 122, 194,.5);
+}
+/*individual option styling */
+.vs-video-title {
+    float: left;
+}
+.vs-video-time {
+    float: right;
+}
+.vs-video-id {
+    float: left;
+    padding-left: 10px;
+    opacity: .5;
+}
