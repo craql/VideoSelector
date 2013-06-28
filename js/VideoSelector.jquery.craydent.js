@@ -97,10 +97,14 @@ function VideoSelector(specs){
 		action = ' onclick="__VSref.selectVideo(${id});" ';
 		template = 
 			"<div class='vs-video-menu-option' data-vidid='${id}' "+action+">"+
-				"<div class='vs-video-title'>${title}</div>"+
-				"<div class='vs-video-id'>${id}</div>"+
-				"<div class='vs-video-time'>${time}</div>"+
-				"<div class='clear'></div>"+			
+				"${RUN[renderVideoThumbnail;${thumbnail}]}"+
+				"<div class='vs-video-info'>"+
+					"<div class='vs-video-title'>${title}</div>"+
+					"<div class='vs-video-id'>${id}</div>"+
+					"<div class='vs-video-time'>${time}</div>"+
+					"<div class='clear'></div>"+			
+				"</div>"+
+				"<div class='clear'></div>"+	
 			"</div>",
 		html="<div class='vs-video-menu'>";
 			html += fillTemplate(template,this.videos);
@@ -108,7 +112,13 @@ function VideoSelector(specs){
 		
 		return html;
 	}
-
+	this.renderVideoThumbnail = function(thumbnail){
+		if(!thumbnail){return '';}
+		var html = 	"<div class='vs-video-thumbnail'>"+
+			"<img src='"+thumbnail+"' class='vs-video-thumbnail-image'/>"+
+		"</div>";
+		return html;
+	}	
 /*-------------------------------------------------------------------->
 	4 | INTERACTIONS
 <--------------------------------------------------------------------*/
@@ -168,3 +178,10 @@ function VideoSelector(specs){
 	return this;	
 }
 
+function renderVideoThumbnail(thumbnail){
+		if(!thumbnail){return '';}
+		var html = 	"<div class='vs-video-thumbnail'>"+
+			"<img src='"+thumbnail+"' class='vs-video-thumbnail-image'/>"+
+		"</div>";
+		return html;
+	}

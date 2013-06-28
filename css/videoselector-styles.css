@@ -42,6 +42,8 @@
 <--------------------------------------------------------------------*/
 .vs-video-menu{
 	margin:0 auto;
+	text-align: left;
+	font-size:14px;
 }
 /*sizes*/
 .XL-size .vs-video-menu{width: 960px;}
@@ -59,15 +61,23 @@
 .vs-video-menu-option.current {
     background: rgba(0, 122, 194,.5);
 }
+
 /*individual option styling */
-.vs-video-title {
+.vs-video-thumbnail {
     float: left;
+    margin-right: 10px;
+}
+
+
+.vs-video-title {
+    /*float: left;*/
+	font-size:16px;
 }
 .vs-video-time {
     float: right;
 }
 .vs-video-id {
     float: left;
-    padding-left: 10px;
+/*    padding-left: 10px;*/
     opacity: .5;
 }
