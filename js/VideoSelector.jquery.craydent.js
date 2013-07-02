@@ -22,6 +22,7 @@ function VideoSelector(specs){
 		L:{width:720,height:405},
 		ML:{width:580,height:320},
 		M:{width:480,height:270},
+		MS:{width:430,height:242},
 		S:{width:320,height:180},
 		XS:{width:270,height:152}
 	};
@@ -145,6 +146,7 @@ function VideoSelector(specs){
 		else if(w >= 720){size = 'L';}
 		else if(w >= 580){size = 'ML';}
 		else if(w >= 480){size = 'M';}
+		else if(w >= 430){size = 'MS';}
 		else if(w > 320){size = 'S';}
 		else{size = 'XS';}//280
 		
